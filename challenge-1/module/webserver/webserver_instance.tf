@@ -61,7 +61,7 @@ resource "aws_launch_configuration" "launch_config_webserver" {
   name   = "launch_config_webserver"
   image_id      = lookup(var.AMIS, var.AWS_REGION)
   instance_type = var.INSTANCE_TYPE
-  user_data = "#!/bin/bash\napt-get update\napt-get -y install net-tools nginx\nMYIP=`ifconfig | grep -E '(inet 10)|(addr:10)' | awk '{ print $2 }' | cut -d ':' -f2`\necho 'Hello Team\nThis is my IP: '$MYIP > /var/www/html/index.html"
+  user_data = "${file("user_data.sh")}"
   security_groups = [aws_security_group.three-tier_webservers.id]
   key_name = "devops-project"
   
