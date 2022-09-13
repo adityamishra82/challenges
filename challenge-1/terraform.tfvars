@@ -1,3 +1,3 @@
 AWS_REGION ="us-east-1"
-AWS_ACCESS_KEY="AKIA3NOZVW5XLMKIKV4F"
-AWS_SECRET_KEY ="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"
+AWS_ACCESS_KEY="xxxxxxxxxxxxxxxxxxxxxx"
+AWS_SECRET_KEY ="xxxxxxxxxxxxxxxxxxx"
